@@ -1,0 +1,154 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "96da0f30-361d-11f0-9700-e37fce9a90e5"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "407939d0-4ac3-11f0-9f9f-896b29f84c29"
+    },
+    "label" : "",
+    "name" : "testDevice",
+    "ownerId" : null,
+    "softwareId" : null,
+    "type" : "default"
+  },
+  "credentials" : {
+    "credentialsId" : "CNlxF3RpC1MTER17KbHm",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1750086919860,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "att_2",
+      "lastUpdateTs" : 1754312296855,
+      "longValue" : 7,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1750086919856,
+      "longValue" : 1750086919856,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "str_2",
+      "lastUpdateTs" : 1754312986452,
+      "longValue" : null,
+      "strValue" : "\"14\""
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "test",
+      "lastUpdateTs" : 1750087569466,
+      "longValue" : null,
+      "strValue" : "/api/images/public/B6k7mZ5zZ0YbD3FHUVu0vxcD0J8fVnmw"
+    } ],
+    "SHARED_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "test",
+      "lastUpdateTs" : 1750086417556,
+      "longValue" : null,
+      "strValue" : "test"
+    } ]
+  },
+  "calculatedFields" : [ {
+    "configuration" : {
+      "type" : "SCRIPT",
+      "arguments" : {
+        "att_2" : {
+          "defaultValue" : "",
+          "refEntityId" : {
+            "entityType" : "DEVICE",
+            "id" : "407939d0-4ac3-11f0-9f9f-896b29f84c29"
+          },
+          "refEntityKey" : {
+            "key" : "att_2",
+            "scope" : "SHARED_SCOPE",
+            "type" : "ATTRIBUTE"
+          }
+        },
+        "str_2" : {
+          "defaultValue" : "",
+          "refEntityId" : {
+            "entityType" : "DEVICE",
+            "id" : "407939d0-4ac3-11f0-9f9f-896b29f84c29"
+          },
+          "refEntityKey" : {
+            "key" : "str_2",
+            "scope" : "SHARED_SCOPE",
+            "type" : "ATTRIBUTE"
+          }
+        },
+        "tmp" : {
+          "defaultValue" : "",
+          "refEntityId" : {
+            "entityType" : "DEVICE",
+            "id" : "407939d0-4ac3-11f0-9f9f-896b29f84c29"
+          },
+          "refEntityKey" : {
+            "key" : "tmp",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "// Sample script to convert temperature readings from Fahrenheit to Celsius\nvar result = tmp[0].b;\nreturn{\n    \"result\": result * 2 + att + str\n};",
+      "output" : {
+        "name" : "",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1753974446638,
+      "failuresEnabled" : true
+    },
+    "name" : "test",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "96962860-361d-11f0-9700-e37fce9a90e5"
+    },
+    "type" : "SCRIPT"
+  } ]
+}
